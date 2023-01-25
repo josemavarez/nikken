@@ -7,8 +7,8 @@
 
     <title></title>
 
-    <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
     <!-- CSS 
     ============================================ -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
     <link rel="stylesheet" href="assets/css/vendor/aos.css">
     <link rel="stylesheet" href="assets/css/plugins/feature.css">
-    <!-- Style css -->
+    <!-- css personalizado -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="white-version home-sticky spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
+<body class="white-version">
 
-    <nav> 
+    <nav>
         <div class="m-4 p-4">
             <img src="/assets/images/logo/logo.svg" alt="">
         </div>
@@ -183,22 +183,6 @@
     </main>
 
 
-    <script>
-        document.getElementById("next-level-modal").addEventListener("click", function() {
-            var currentLevel = document.querySelector(".modal.show").id.match(/ModalCenter-(\d+)/)[1];
-            console.log("este es el nivel actual" + currentLevel);
-
-            var currentItem = document.querySelector(".rn-journey[data-target='#ModalCenter-" + currentLevel + "'] .thumbnail img");
-
-            var nextLevel = parseInt(currentLevel) + 1;
-
-            var nextItem = document.querySelector(".rn-journey[data-target='#ModalCenter-" + nextLevel + "'] .thumbnail img");
-
-            nextItem.classList.remove("inactive");
-            nextItem.classList.add("active");
-        });
-    </script>
-
 
 
     <!-- JS ============================================ -->
@@ -213,7 +197,9 @@
 
     <!-- main JS -->
     <script src="assets/js/main.js"></script>
-
+    
+    <!-- control de niveles -->
+    <script src="assets/js/levels-control.js"></script>
 
 
 
