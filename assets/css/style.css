@@ -14639,7 +14639,13 @@ body.white-version {
       position: fixed;
       bottom: 14px;
       right: -10px;
-      width: 100%; } }
+      width: 100%; } 
+
+
+      .container, .container-md, .container-sm {
+       width: 90% !important;
+    }
+    }
 
 
   
