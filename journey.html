@@ -42,8 +42,8 @@
 
                 <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
                     <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-                        class="col-12 mt--50 mt_md--30 mt_sm--30 active">
-                        <div class="rn-journey" data-toggle="modal" data-target="#ModalCenter-1">
+                        class="col-12 mt--50 mt_md--30 mt_sm--30 ">
+                        <div class="rn-journey active" data-toggle="modal" data-target="#ModalCenter-1">
                             <div class="inner">
                                 <div class="thumbnail">
                                     <a href="javascript:void(0)">
@@ -54,8 +54,8 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-                        class="col-12 mt--50 mt_md--30 mt_sm--30 inactive">
-                        <div class="rn-journey" data-toggle="modal" data-target="#ModalCenter-2">
+                        class="col-12 mt--50 mt_md--30 mt_sm--30 ">
+                        <div class="rn-journey inactive" data-toggle="modal" data-target="#ModalCenter-2">
                             <div class="inner">
                                 <div class="thumbnail">
                                     <a href="javascript:void(0)">
@@ -66,8 +66,8 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-                        class="col-12 mt--50 mt_md--30 mt_sm--30 inactive">
-                        <div class="rn-journey" data-toggle="modal" data-target="#ModalCenter-3">
+                        class="col-12 mt--50 mt_md--30 mt_sm--30 ">
+                        <div class="rn-journey inactive" data-toggle="modal" data-target="#ModalCenter-3">
                             <div class="inner">
                                 <div class="thumbnail">
                                     <a href="javascript:void(0)">
@@ -183,7 +183,21 @@
     </main>
 
 
+    <script>
+        document.getElementById("next-level-modal").addEventListener("click", function() {
+            var currentLevel = document.querySelector(".modal.show").id.match(/ModalCenter-(\d+)/)[1];
+            console.log("este es el nivel actual" + currentLevel);
 
+            var currentItem = document.querySelector(".rn-journey[data-target='#ModalCenter-" + currentLevel + "'] .thumbnail img");
+
+            var nextLevel = parseInt(currentLevel) + 1;
+
+            var nextItem = document.querySelector(".rn-journey[data-target='#ModalCenter-" + nextLevel + "'] .thumbnail img");
+
+            nextItem.classList.remove("inactive");
+            nextItem.classList.add("active");
+        });
+    </script>
 
 
 
@@ -202,16 +216,7 @@
 
 
 
-    <script>
-    document.getElementById("next-level-modal").addEventListener("click", function() {
-        var currentLevel = document.querySelector(".modal.show").id.match(/ModalCenter-(\d+)/)[1];
-        var currentItem = document.querySelector(".rn-journey[data-target='#ModalCenter-" + currentLevel + "'] .thumbnail img");
-        var nextLevel = parseInt(currentLevel) + 1;
-        var nextItem = document.querySelector(".rn-journey[data-target='#ModalCenter-" + nextLevel + "'] .thumbnail img");
-        nextItem.classList.remove("inactive");
-        nextItem.classList.add("active");
-    });
-    </script>
+
 
 </body>
 
