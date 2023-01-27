@@ -56,7 +56,7 @@
   --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
   --color-heading: #ffffff;
   --color-heading-wv: #1e2125;
-  --color-body: #878e99;
+  --color-body: #3e4146;
   --color-body-white: #3c3e41;
   --color-lightn: #c4cfde;
   --color-midgray: #878787;
@@ -96,7 +96,7 @@
   --transition: 0.4s;
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Montserrat', sans-serif;
-  --font-size-b1: 18px;
+  --font-size-b1: 15px;
   --font-size-b2: 22px;
   --font-size-b3: 14px;
   --line-height-b1: 1.50;
@@ -21658,7 +21658,7 @@ body.white-version {
 
 .white-version a.rn-btn::before,
 .white-version button.rn-btn::before {
-  background: var(--gradient-red-hover);
+  background: #0E656F;
 }
 
 .white-version a.rn-btn:hover,
@@ -21752,6 +21752,10 @@ body.white-version {
 
 .inactive {
   filter: grayscale(100%);
+  pointer-events: none;
+}
+.lvl-s{
+  max-width: 14%;
 }
 
 @media only screen and (max-width: 767px) {
