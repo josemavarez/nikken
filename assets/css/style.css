@@ -21774,7 +21774,10 @@ body.white-version {
   }
 
 
-
+  .modal-structure {
+    padding: 20px;
+  
+  }
   .modal-space {
     display: flex;
     align-items: center;
