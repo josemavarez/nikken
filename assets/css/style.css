@@ -21733,12 +21733,18 @@ body.white-version {
 }
 
 .modal-structure {
-  padding: 70px;
+  padding: 60px;
 
 }
 
 .modal-space {
+  display: flex;
   align-items: center;
+  -ms-flex-direction: row !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: row !important;
+    flex-direction: row !important;
 }
 
 .btn-center {
@@ -21768,9 +21774,14 @@ body.white-version {
   }
 
 
-  .container,
-  .container-md,
-  .container-sm {
-    width: 90% !important;
+
+  .modal-space {
+    display: flex;
+    align-items: center;
+    -ms-flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
   }
 }
