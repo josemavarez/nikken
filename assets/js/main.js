@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 (function ($) {
     'use strict';
 
@@ -104,3 +114,32 @@
 })(jQuery, window)
 
 
+
+
+
+//cambiar inactive por active luego de hacer click en  next-level-modal
+$("#next-level-modal").click(function () {
+    // Extraer número del nivel actual
+    var currentLevel = $(".active").attr("data-target").match(/\d+/)[0];
+
+    console.log("Estas en el nivel " + currentLevel)
+
+    // Buscar elemento con id "ModalCenter-x+1" y cambiar la clase "inactive" por "active"
+    var nextLevel = parseInt(currentLevel) + 1;
+    $("#ModalCenter-" + nextLevel).removeClass("inactive");
+    $("#ModalCenter-" + nextLevel).addClass("active");
+    console.log("Pasaste al nivel " + nextLevel)
+});
+
+
+//centrar destino de fragmento de ancla
+$(".lvl-s").click(function (event) {
+    event.preventDefault();
+    var id = $(this).attr("href");
+    var destinoAncla = $(id);
+    var posicionAncla = destinoAncla.offset().top;
+
+    $("html, body").animate({
+        scrollTop: posicionAncla - ($(window).height() * 0.18),
+    }, "smooth");
+});
